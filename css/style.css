@@ -1,0 +1,634 @@
+/*? ♦ table of contents ♦
+/*?
+/*?   0. Background Image + Misc 
+/*?
+/*?   1. Navigation between pages
+/*?     1.1 Animations
+/*?
+/*?   2. About Page
+/*?
+/*?   3. Hobby Page
+/*?
+/*?   4. Gallery page
+/*?     1.1 Images
+/*?
+/*?   5. Footer
+/*?
+/*?   6. Contact
+/*?     1.1 Animations
+/*?     1.2 Popup Screen
+*/
+
+
+
+/** =============================
+/**    Background Image + Misc
+/** =============================*/
+
+body{
+    /* Background Image */
+    background-image: url(./../img/polygon-scatter-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Misc */
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+/** =============================
+/**   Navigation Between Pages 
+/** =============================*/
+
+header ul{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 125px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 2;
+    background: #00000086;
+}
+
+header li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin-right: 2%;
+}
+
+header a{
+    text-decoration: none;
+    color: #D6DBDF;
+}
+
+/*? =[Animations]= */
+
+header a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #ff3c78;
+    width: 0%;
+    left: 0;
+    bottom: 35px;
+    transition: 0.5s;
+}
+
+header a:hover::after{
+    width: 100%;
+}
+
+header a.selected{
+    animation: menu_selected 2s linear infinite;
+}
+
+@keyframes menu_selected {
+    from {color: #B900FF;}
+    50% {color: #00CDFF;}
+    to {color: #B900FF;}
+}
+
+/*? =[Animations]= */
+
+header span{
+    position: absolute;
+    margin-top: 0.2vh;
+    left: 5%;
+    color: #D6DBDF;
+    font-size: 3.5em;
+}
+
+header img{
+    position: relative;
+    top: 20px;
+    width: 12%;
+    margin-right: 10px;
+}
+
+
+
+/** =============================
+/**          Home Page
+/** =============================*/
+
+h1#h1home{
+    font-size: 4em;
+    color: #D6DBDF;
+    text-align: center;
+    margin-top: 20vh;
+}
+h1#h1home > span.nickname{
+    color: #FFFB00;
+}
+
+h2#h2home{
+    font-size: 2.5em;
+    color: #D6DBDF;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+div#summary{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    align-self: center;
+    justify-content: space-evenly;
+    margin-bottom: 2vh;
+}
+
+div#summary h4{
+    font-size: 1.5em;
+    color: #FFC100;
+}
+
+
+
+/** =============================
+/**          About Page
+/** =============================*/
+
+div#about-me{
+    width: 60%;
+    height: 1000px;
+    margin-top: 15vh;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+div#about-me div#ohlunar_img{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+div#about-me img{
+    background-size: cover;
+    border-radius: 20px;
+    height: 1000px;
+    width: 700px;
+}
+
+div#about-me div.article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 7px;
+    width: 50%;
+    height: 80%;
+} 
+
+div#about-me h2{
+    font-size: 2.5em;
+    color: #D6DBDF;
+    
+}
+
+div#about-me span#nickname{
+    position: relative;
+    color: #FFFB00;
+}
+
+div#about-me p{
+    font-size: 1.5em;
+    color: #A5A5A5;
+    text-align: left;
+    letter-spacing: 0.8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+/** =============================
+/**          Hobby Page
+/** =============================*/
+
+div#vgames, div#drawing, div#music{
+    width: 60%;
+    height: 1000px;
+    margin: 15vh 0px 2vh 9%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div#vgames div#vgames-img,  div#drawing div#drawing-img,  div#music div#music-img{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+div#vgames img,  div#drawing img,  div#music img{
+    background-size: cover;
+    border-radius: 20px;
+    height: 1000px;
+    width: 700px;
+}
+
+div#vgames div.hobby-vgames,  div#drawing div.hobby-drawing,  div#music div.hobby-music{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 7px;
+    width: 50%;
+    height: 80%;
+} 
+
+div#vgames h2,  div#drawing h2,  div#music h2{
+    font-size: 2.5em;
+    color: #D6DBDF;
+}
+
+div#vgames p,  div#drawing p,  div#music p{
+    font-size: 1.5em;
+    color: #A5A5A5;
+    text-align: left;
+    letter-spacing: 0.8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+div#drawing{
+    margin-left: 31.4%;
+}
+
+div#drawing h2{
+    display: flex;
+    justify-content: flex-end;
+}
+
+div#drawing  p{
+    text-align: right;
+}
+
+
+
+/** =============================
+/**         Gallery Page
+/** =============================*/
+
+div.container{
+    display: flex;
+    width: 90vw;
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    align-self: center;
+    align-items: center;
+}
+
+div.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px;
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 5px;
+    transition: flex 0.7s ease-in;
+}
+
+div.panel.active{
+    flex: 5;
+}
+
+/*? =[Images]= */
+
+div#img1{
+    background-image: url(https://images.unsplash.com/photo-1673377006564-45c061e6cbe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img2{
+    background-image: url(https://images.unsplash.com/photo-1673360854126-4268931279f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img3{
+    background-image: url(https://images.unsplash.com/photo-1673286900865-ab88ead9285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img4{
+    background-image: url(https://images.unsplash.com/photo-1590127880121-a3f45f799a6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img5{
+    background-image: url(https://images.unsplash.com/photo-1673205194019-55ac9f0a0899?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img6{
+    background-image: url(https://images.unsplash.com/photo-1666804054997-8e7c5c5db968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80);
+}
+div#img7{
+    background-image: url(https://images.unsplash.com/photo-1673264762468-22d77c97825f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img8{
+    background-image: url(https://images.unsplash.com/photo-1658518815743-af2e2ff993af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80);
+}
+div#img9{
+    background-image: url(https://images.unsplash.com/photo-1666205529005-748f9071e629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+div#img10{
+    background-image: url(https://images.unsplash.com/photo-1670273647727-6daa7e657e6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+}
+
+/*? =[Images]= */
+
+
+
+/** =============================
+/**           Contact
+/** =============================*/
+
+div#box{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    align-self: center;
+    background-color: #111111;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*? =[Animations]= */
+
+div#box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 670px;
+    background: linear-gradient(0deg, transparent, #9900FF, #9900FF);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+div#box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 670px;
+    background: linear-gradient(0deg, transparent, #9900FF, #9900FF);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate
+{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*? =[Animations]= */
+
+div#box h2{
+    color: #C62368;
+    font-size: 3em;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.06em;
+    margin: 1.5vh 1.5vh 1vh;
+}
+
+div#box div#form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    inset: 3px;
+    z-index: 1;
+    background: #131313;
+    border-radius: 10px;
+    padding: 30px 30px;
+}
+
+div#box input{
+    position: relative;
+    height: 55px;
+    width: 100%;
+    padding: 20px 0px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FA7268;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    border-radius: 10px;
+}
+
+div#box div.inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+div#box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #C62368;
+    border-radius: 10px;
+}
+
+div#box button.send{
+    margin-top: 3vh;
+    background-color: #424242;
+    color: #C62368;
+    font-size: 2.5em;
+    height: 70px;
+    border-radius: 10px;
+    border: none;
+}
+
+div#box input::placeholder{
+    color: #919191;
+}
+
+div#box button.send:hover{
+    background-color: #C62368;
+    color: #D6DBDF;
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+div#box button.send:active{
+    transform: scale(0.95);
+}
+
+/*? =[Popup Screen]= */
+
+div.submission{
+    /* Placing */
+    position: absolute;
+    top: -300px;
+    left: 22%;
+    z-index: 1;
+    /* Organization */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* Size */
+    width: 350px;
+    height: 250px;
+    /* Style */
+    color: white;
+    background-color: #131313;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* Text */
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    /* Misc */
+    overflow: hidden;
+    visibility: hidden;
+}
+
+div.popup{
+    user-select: none;
+    visibility: visible;
+    animation: drop 1s ease forwards;
+}
+
+@keyframes drop {
+    0%{opacity: 0}
+    50%{transform: translateY(500px)}
+    100%{transform: translateY(475px); opacity: 0.9;}
+}
+
+div.submission  h3#h_submission{
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+div.submission p{
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+div.submission button{
+    /* Placing */
+    margin: 10px;
+    padding: 15px 30px;
+    /* Organization */
+    display: block;
+    text-align: center;
+    /* Size */
+    background-size: 200% auto;
+    /* Style */
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0px 0px 14px -7px #FF512F;
+    background-image: linear-gradient(45deg, #C62368 0%, #ff9e2f  51%, #C62368  100%);
+    transition: 0.5s;
+    /* Text */
+    text-transform: uppercase;
+    font-weight: 700;
+    /* Misc */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+div.submission button:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+div.submission button:active{
+    transform: scale(0.95);
+}
+
+/*? =[Popup Screen]= */
+
+
+
+/** =============================
+/**            Footer
+/** =============================*/
+
+footer{
+    margin-top: auto;
+    background-color: #111111;
+    font-family: "Open Sans";
+    padding-top: 15px;
+    color: white;
+    width: 100vmax;
+}
+
+footer div#footer-content{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+footer h3{
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+footer ul{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+footer a.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+footer img{
+    width: 32px;
+    height: 32px;
+}
+footer a:hover{
+    background-color: #810000;
+    border-radius: 40px;
+    transform: scale(1.1);
+}
+
+footer p{
+    text-align: center;
+    margin: 12px;
+}
+footer span{
+    color: #FFFB00;
+}

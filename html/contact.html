@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <span><img src="./../img/contact.png" alt="" />Contact</span>
+                <li><a href="./index.html" class="menu">Home</a></li>
+                <li><a href="./about.html" class="menu">About</a></li>
+                <li><a href="./hobby.html" class="menu">Hobby</a></li>
+                <li><a href="./gallery.html" class="menu">Gallery</a></li>
+                <li><a href="./contact.html" class="menu selected">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="box">
+        <div id="form">
+            <h2>Contact Me</h2>
+            <div class="inputbox name">
+                <input type="text" id="username" placeholder="Name" />
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="passwd" placeholder="Password" />
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="email" id="email" placeholder="Email" />
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="tel" id="phone" pattern="05{1}[0-9]{7}[0-9]" placeholder="Phone format - 05x-xxxxxxx" />
+                <i></i>
+            </div>
+                <button class="send" onclick="collectDataFromForm()"> Send </button>
+        </div>
+        
+        <div id="popup" class="submission">
+            <h3 id="h_submission"></h3>
+            <p>Your information has been successfully submitted. Thanks!</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    
+    <footer>
+        <div id="footer-content">
+            <h3>OHLunar</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                <br/> Sagittis nisl rhoncus mattis rhoncus urna neque.
+            </p>
+            <ul>
+                <li><a href="https://www.facebook.com/" class="social fbook" target="_blank"><img src="./../img/facebook.png"/></a></li>
+                <li><a href="https://www.instagram.com/" class= "social instagram" target="_blank"><img src="./../img/instagram.png"/></a></li>
+                <li><a href="https://il.linkedin.com/" class= "social linkedin" target="_blank"><img src="./../img/linkedin.png"/></a></li>
+                <li><a href="https://twitter.com/?lang=en" class= "social twitter" target="_blank"><img src="./../img/twitter.png"/></a></li>
+                <li><a href="https://www.reddit.com/" class= "social reddit" target="_blank"><img src="./../img/reddit.png"/></a></li>
+            </ul>
+        </div>
+        <div id="footer-bottom">
+            <p>
+                Designed by <span>OHLunar</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="./../js/main.js"></script>
+</body>
+</html>
